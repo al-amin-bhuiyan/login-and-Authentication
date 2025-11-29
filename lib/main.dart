@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:log_auth/route/route_path.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'auth/supabase_config.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Supabase
+  await Supabase.initialize(
+    url: SupabaseConfig.supabaseUrl,
+    anonKey: SupabaseConfig.supabaseAnonKey,
+  );
+
   runApp(const MyApp());
 }
 

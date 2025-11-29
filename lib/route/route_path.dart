@@ -5,6 +5,7 @@ import 'package:log_auth/pages/home_page.dart';
 import 'package:log_auth/pages/profile_page.dart';
 import 'package:log_auth/pages/settings_page.dart';
 import 'package:log_auth/pages/about_page.dart';
+import 'package:log_auth/pages/chat_page.dart';
 import '../pages/sign_in_page.dart';
 import 'routes.dart';
 
@@ -41,6 +42,11 @@ class RoutePath {
         path: Routes.about,
         name: Routes.about,
         builder: (context, state) => const AboutPage(),
+      ),
+      GoRoute(
+        path: Routes.chat,
+        name: Routes.chat,
+        builder: (context, state) => const ChatListPage(),
       ),
     ],
     errorBuilder: (context, state) => Scaffold(

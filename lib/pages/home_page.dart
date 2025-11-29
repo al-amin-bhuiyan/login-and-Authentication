@@ -135,6 +135,13 @@ class HomePage extends StatelessWidget {
                 Icons.info,
                 Routes.about,
               ),
+              const SizedBox(height: 20),
+              _buildNavigationButton(
+                context,
+                'Chat',
+                Icons.chat,
+                Routes.chat,
+              ),
             ],
           ),
         ),
